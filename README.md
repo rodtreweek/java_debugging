@@ -28,3 +28,9 @@ Track by specific system call group
 Trace multiple syscalls
 
 strace -e open,close
+
+You can trace the interaction between the JVM and the linux kernel using strace. For example the call 
+```
+strace -f -o strace.log -tt -T -s 1024 java -jar socket-timeouts*.jar 127.0.0.1 1234 0 0 
+```
+will run the JVM and record all of the syscall activity of the JVM and all of its child processes and write them in a human-readable format in strace.log 
