@@ -1,6 +1,6 @@
 # java_debugging
 
-
+strace -ttfF -p <pid>
 strace -F -p <pid> 2>&1|grep -v clock_gettime
   sudo strace -p <pid> -e open -o processExecute.txt
 
