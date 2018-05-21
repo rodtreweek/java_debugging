@@ -6,7 +6,7 @@
 * `strace -p <pid> -e open -o processExecute.txt # attach to PID and limit output to opens and create and send this to the processExecute.txt file.`
 
 * `strace -p 22254 -s 80 -o /tmp/debug.lighttpd.txt # attach to PID and include 80 characters strsize instead of default 32. Send this to a file.`
-* `strace -e trace=open,read -p 22254 -s 80 -o debug.webserver.txt # limit same trace as above to the open, read system calls.
+* `strace -e trace=open,read -p 22254 -s 80 -o debug.webserver.txt # limit same trace as above to the open, read system calls.`
 * `strace $(pidof apache2 |sed 's/\([0-9]*\)/\-p \1/g') # strace multiple pid's of running procs.`
 
 
