@@ -1,6 +1,7 @@
 # java_debugging
 
-* strace -ttfF -p <pid>
+* `strace -ttf -p <pid> # trace a running process and show time to the microsecond (-tt) - and also trace child processes as they are created  by currently traced processes as  a  result of  the  fork, vfork and clone system  calls. Note that -p PID -f (which is the same as the now obsolete -F) will attach all threads of process PID  if  it is  multi-threaded,  not  only thread with thread_id = PID.`
+
 * strace -F -p <pid> 2>&1|grep -v clock_gettime
 * strace -p <pid> -e open -o processExecute.txt
 
